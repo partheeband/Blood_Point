@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewProfileActivity"
+    android:background="@drawable/backgrounduserinfo">
+
+<ScrollView
+    android:id="@+id/scrollView"
+    android:layout_width="364dp"
+    android:layout_height="670dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/rounded_corner">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_usericon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/textViewUserInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewUser"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="User Info"
+            android:textColor="#CF1313"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:id="@+id/textViewPersonalDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewUserInfo"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:text="Personal Details:"
+            android:textColor="#CF1313"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imageViewEditUserInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewUserInfo"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/textViewPersonalDetails"
+            app:srcCompat="@drawable/icon_edit" />
+
+        <ImageView
+            android:id="@+id/imageViewUpdatePersonalDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewUserInfo"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/textViewPersonalDetails"
+            app:srcCompat="@drawable/icon_update_tick" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutPersonalDetails"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewEditUserInfo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textbox">
+
+            <TextView
+                android:id="@+id/textView_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:paddingTop="10dp"
+                android:text="Name"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewUserName"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/textbox"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Mr.ABCD"
+                android:textColor="#726969"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewUserName"
+                android:layout_marginStart="30dp"
+                android:paddingTop="10dp"
+                android:text="Gender"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewGender"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_gender"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/textbox"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Male"
+                android:textColor="#726969"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewGender"
+                android:layout_marginStart="30dp"
+                android:paddingTop="10dp"
+                android:text="City"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextCity"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_city"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/textbox"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Chennai"
+                android:textColor="#726969"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView_phoneno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextCity"
+                android:layout_marginStart="30dp"
+                android:paddingTop="10dp"
+                android:text="Phone No."
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextPhoneNo"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_phoneno"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/textbox"
+                android:digits="1234567890"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="1234567890"
+                android:textColor="#726969"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextPhoneNo"
+                android:layout_marginStart="30dp"
+                android:paddingTop="10dp"
+                android:text="Email"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/textbox"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="abc@gmail.com"
+                android:textColor="#726969"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView_bloodgroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewEmail"
+                android:layout_marginStart="30dp"
+                android:paddingTop="10dp"
+                android:text="Blood Group"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewBloodGroup"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_bloodgroup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/textbox"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="BloodGroup: o+"
+                android:textColor="#726969"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayoutPersonalDetails"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Status"
+            android:textColor="#CF1313"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/relativeLayoutPersonalDetails"
+    android:layout_toRightOf="@+id/textViewStatus"
+    android:layout_marginTop="17dp"
+    android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donor" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User" />
+</RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewAchievements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewStatus"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:text="Achievements:"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#CF1313" />
+
+        <ImageView
+            android:id="@+id/imageViewEditAchievements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewStatus"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@id/textViewAchievements"
+            app:srcCompat="@drawable/icon_edit" />
+
+
+        <ImageView
+            android:id="@+id/imageViewAchievements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_achievement"
+            android:layout_below="@id/textViewAchievements"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"/>
+
+        <TextView
+            android:id="@+id/textViewNooflivessaved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imageViewAchievements"
+            android:layout_below="@id/textViewAchievements"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:text="No. of Lives Saved"
+            android:textColor="#CF1313"/>
+
+        <TextView
+            android:id="@+id/textViewTotalDonation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewAchievements"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/textViewNooflivessaved"
+            android:background="@drawable/textboxsmall"
+            android:paddingHorizontal="2dp"
+            android:text="0"
+            android:textColor="#000000" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imageViewAchievements"
+            android:layout_below="@id/textViewNooflivessaved"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:text="Last Donation Date"
+            android:textColor="#CF1313"/>
+
+        <TextView
+            android:id="@+id/textViewLastDonationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewNooflivessaved"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/textView"
+            android:background="@drawable/textboxsmall"
+            android:paddingHorizontal="2dp"
+            android:text="Nil"
+            android:textColor="#000000" />
+
+    </RelativeLayout>
+</ScrollView>
+    <ImageView
+        android:id="@+id/imageViewhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_home"
+        android:layout_below="@+id/scrollView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/homepage_background">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BLOOD DONOR MANAGEMENT SYSTEM"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+            <ImageView
+                android:id="@+id/imageViewDonateBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon_blood_donationbox"
+                android:layout_below="@+id/textViewTitle"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"/>
+
+            <ImageView
+                android:id="@+id/imageViewSomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/homepage_sometext"
+                android:layout_below="@+id/imageViewDonateBox"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="40dp"/>
+
+            <ImageView
+                android:id="@+id/imageViewGraph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon_graph"
+                android:layout_below="@id/imageViewSomeText"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"/>
+
+            <ImageView
+                android:id="@+id/imageViewEnterButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/enter_button"
+                android:layout_below="@+id/imageViewGraph"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="50dp"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

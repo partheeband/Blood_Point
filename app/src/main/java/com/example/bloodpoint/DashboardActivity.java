@@ -47,8 +47,8 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             startActivity(intent);
         }
         else if (view==RequestBlood){
-            Intent intent=new Intent(getApplicationContext(),DashboardActivity.class);
-            //startActivity(intent);
+            Intent intent=new Intent(getApplicationContext(),RequestBloodActivity.class);
+            startActivity(intent);
         }
         else if (view==SaveALife){
             Intent intent=new Intent(getApplicationContext(),DashboardActivity.class);

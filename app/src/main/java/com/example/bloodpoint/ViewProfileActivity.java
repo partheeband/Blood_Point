@@ -108,7 +108,7 @@ public class ViewProfileActivity extends AppCompatActivity implements View.OnCli
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                UserInformation userinformation = dataSnapshot.getValue(UserInformation.class);
+                UserInformationHelper userinformation = dataSnapshot.getValue(UserInformationHelper.class);
 
                 Log.d("data", "Value is: " + userinformation);
                 //Toast.makeText(getApplicationContext(), userinformation.name+" "+userinformation.city+" "+userinformation.phoneno+" "+userinformation.gender+" "+userinformation.bloodgroup+" "+userinformation.isDonor, Toast.LENGTH_SHORT).show();
@@ -221,7 +221,7 @@ public class ViewProfileActivity extends AppCompatActivity implements View.OnCli
                     String date = sdf.format(c.getTime());
                     int totalDonation=Integer.parseInt(strTotalDonation);
                     totalDonation++;
-                    UserInformation userInformation=new UserInformation(totalDonation,date);
+                    UserInformationHelper userInformation=new UserInformationHelper(totalDonation,date);
 
                     firebaseDatabase=FirebaseDatabase.getInstance();
                     user = FirebaseAuth.getInstance().getCurrentUser();
@@ -246,7 +246,7 @@ public class ViewProfileActivity extends AppCompatActivity implements View.OnCli
         {
             if (editTextPhoneNo.getText().toString().trim().length() == 10 && editTextCity.getText().toString().trim().length() != 0)
             {
-                UserInformation userInformation_PersonalDetails = new UserInformation(editTextCity.getText().toString().trim(),editTextPhoneNo.getText().toString().trim(), radioButtonDonor.isChecked());
+                UserInformationHelper userInformation_PersonalDetails = new UserInformationHelper(editTextCity.getText().toString().trim(),editTextPhoneNo.getText().toString().trim(), radioButtonDonor.isChecked());
                 firebaseDatabase = FirebaseDatabase.getInstance();
                 user = FirebaseAuth.getInstance().getCurrentUser();
                 databaseReference_update = FirebaseDatabase.getInstance().getReference();

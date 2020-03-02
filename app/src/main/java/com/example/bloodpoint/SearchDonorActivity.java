@@ -5,9 +5,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,8 +20,9 @@ import java.util.List;
 public class SearchDonorActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private SearchDonorAdapter adapter;
-    private List<UserInformation> DonorList;
+    private List<UserInformationHelper> DonorList;
     DatabaseReference dbDonor;
+    FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,8 +36,9 @@ public class SearchDonorActivity extends AppCompatActivity {
         adapter = new SearchDonorAdapter(this, DonorList);
         recyclerView.setAdapter(adapter);
 
+        user = FirebaseAuth.getInstance().getCurrentUser();
         //1. SELECT * FROM Artists
-        dbDonor = FirebaseDatabase.getInstance().getReference("userprofile") ;
+        dbDonor = FirebaseDatabase.getInstance().getReference("userprofile");
         dbDonor.addListenerForSingleValueEvent(valueEventListener);
     }
     ValueEventListener valueEventListener = new ValueEventListener() {
@@ -45,15 +47,7 @@ public class SearchDonorActivity extends AppCompatActivity {
             DonorList.clear();
             if (dataSnapshot.exists()) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    UserInformation donordetails = snapshot.getValue(UserInformation.class);
-                    DonorList.add(donordetails);
-                }
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        UserInformation donordetails = snapshot.getValue(UserInformation.class);
-                        DonorList.add(donordetails);
-                    }
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    UserInformation donordetails = snapshot.getValue(UserInformation.class);
+                    UserInformationHelper donordetails = snapshot.getValue(UserInformationHelper.class);
                     DonorList.add(donordetails);
                 }
                 adapter.notifyDataSetChanged();

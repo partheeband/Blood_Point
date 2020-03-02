@@ -1,6 +1,6 @@
 package com.example.bloodpoint;
 
-public class UserInformation {
+public class UserInformationHelper {
     public String name;
     public String city;
     public String phoneno;
@@ -10,12 +10,12 @@ public class UserInformation {
     public int totalDonations;
     public String lastDonationDate;
 
-    public UserInformation(){
+    public UserInformationHelper(){
 
     }
 
 
-    public UserInformation(String name, String city, String phoneno, String gender, String bloodgroup, Boolean isDonor,int totalDonations,String lastDonationDate) {
+    public UserInformationHelper(String name, String city, String phoneno, String gender, String bloodgroup, Boolean isDonor, int totalDonations, String lastDonationDate) {
         this.name = name;
         this.city = city;
         this.phoneno=phoneno;
@@ -25,12 +25,12 @@ public class UserInformation {
         this.totalDonations=totalDonations;
         this.lastDonationDate=lastDonationDate;
     }
-        public UserInformation(int totalDonations,String lastDonationDate) {
+    public UserInformationHelper(int totalDonations, String lastDonationDate) {
         this.totalDonations=totalDonations;
         this.lastDonationDate=lastDonationDate;
     }
 
-    public UserInformation(String city, String phoneno, boolean isDonor) {
+    public UserInformationHelper(String city, String phoneno, boolean isDonor) {
         this.city = city;
         this.phoneno=phoneno;
         this.isDonor=isDonor;

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchDonorActivity"></activity>
+        <activity android:name=".RequestBloodActivity"></activity>
+        <activity android:name=".SearchDonorActivity" />
         <activity android:name=".ViewProfileActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".LoginActivity" />

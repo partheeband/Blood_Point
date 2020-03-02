@@ -176,7 +176,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                         if (task.isSuccessful()) {
                             //display some message here
                             Toast.makeText(getApplicationContext(), "Successfully registered", Toast.LENGTH_LONG).show();
-                            UserInformation userInformation=new UserInformation(name,city,phoneno,gender,bloodgroup,isDonor,totalDonation,lastDonationDate);
+                            UserInformationHelper userInformation=new UserInformationHelper(name,city,phoneno,gender,bloodgroup,isDonor,totalDonation,lastDonationDate);
 
 
                             FirebaseUser user=firebaseAuth.getCurrentUser();

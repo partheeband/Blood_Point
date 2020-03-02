@@ -14,8 +14,8 @@ import java.util.List;
 
 public class SearchDonorAdapter extends RecyclerView.Adapter<SearchDonorAdapter.SearchDonorViewHolder> {
     private Context mCtx;
-    private List<UserInformation> DonorList;
-    public SearchDonorAdapter(Context mCtx, List<UserInformation> DonorList) {
+    private List<UserInformationHelper> DonorList;
+    public SearchDonorAdapter(Context mCtx, List<UserInformationHelper> DonorList) {
         this.mCtx = mCtx;
         this.DonorList = DonorList;
     }
@@ -29,7 +29,7 @@ public class SearchDonorAdapter extends RecyclerView.Adapter<SearchDonorAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull SearchDonorViewHolder holder, int position) {
-        UserInformation userInformation = DonorList.get(position);
+        UserInformationHelper userInformation = DonorList.get(position);
         holder.textViewName.setText(userInformation.name);
         holder.textViewBloodGroup.setText(userInformation.bloodgroup);
         holder.textViewContactNo.setText(userInformation.phoneno);

@@ -4,7 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -40,6 +43,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         getSupportActionBar().hide(); // hide the title bar
         //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
         // WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
+        getWindow().setBackgroundDrawableResource(R.drawable.signup);
 
 
 
@@ -80,6 +84,9 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         if (view==signup){
+            if(!haveNetworkConnection()){
+                Toast.makeText(this, "Please check your internet connection...", Toast.LENGTH_SHORT).show();
+            }
             registerUser();
 
         }
@@ -97,7 +104,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         final String gender,bloodgroup;
         final String city=City.getText().toString().trim();
         final String phoneno=Contactno.getText().toString().trim();
-        String email = Email.getText().toString().trim();
+        final String email = Email.getText().toString().trim();
         String password = Password.getText().toString().trim();
         String confirmpassword = ConfirmPassword.getText().toString().trim();
         final Boolean isDonor=true;
@@ -176,10 +183,8 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                         if (task.isSuccessful()) {
                             //display some message here
                             Toast.makeText(getApplicationContext(), "Successfully registered", Toast.LENGTH_LONG).show();
-                            UserInformationHelper userInformation=new UserInformationHelper(name,city,phoneno,gender,bloodgroup,isDonor,totalDonation,lastDonationDate);
-
-
                             FirebaseUser user=firebaseAuth.getCurrentUser();
+                            UserInformationHelper userInformation=new UserInformationHelper(name,city,phoneno,gender,bloodgroup,isDonor,totalDonation,lastDonationDate,email);
                             databaseReference.child("userprofile").child(user.getUid()).setValue(userInformation);
                             //start profile activity
                             finish();
@@ -252,5 +257,21 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 throw new IllegalStateException("Unexpected value: " + spinner_bloodgroup_position);
         }
         return bloodgroup;
+    }
+    private boolean haveNetworkConnection() {
+        boolean haveConnectedWifi = false;
+        boolean haveConnectedMobile = false;
+
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo[] netInfo = cm.getAllNetworkInfo();
+        for (NetworkInfo ni : netInfo) {
+            if (ni.getTypeName().equalsIgnoreCase("WIFI"))
+                if (ni.isConnected())
+                    haveConnectedWifi = true;
+            if (ni.getTypeName().equalsIgnoreCase("MOBILE"))
+                if (ni.isConnected())
+                    haveConnectedMobile = true;
+        }
+        return haveConnectedWifi || haveConnectedMobile;
     }
 }

@@ -9,13 +9,14 @@ public class UserInformationHelper {
     public Boolean isDonor;
     public int totalDonations;
     public String lastDonationDate;
+    public String email;
 
     public UserInformationHelper(){
 
     }
 
 
-    public UserInformationHelper(String name, String city, String phoneno, String gender, String bloodgroup, Boolean isDonor, int totalDonations, String lastDonationDate) {
+    public UserInformationHelper(String name, String city, String phoneno, String gender, String bloodgroup, Boolean isDonor, int totalDonations, String lastDonationDate,String email) {
         this.name = name;
         this.city = city;
         this.phoneno=phoneno;
@@ -24,6 +25,7 @@ public class UserInformationHelper {
         this.isDonor=isDonor;
         this.totalDonations=totalDonations;
         this.lastDonationDate=lastDonationDate;
+        this.email=email;
     }
     public UserInformationHelper(int totalDonations, String lastDonationDate) {
         this.totalDonations=totalDonations;

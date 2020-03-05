@@ -19,6 +19,7 @@
             android:layout_marginTop="5dp"
             android:padding="8dp">
 
+
             <ImageView
                 android:id="@+id/imageViewGender"
                 android:layout_width="120dp"
@@ -27,7 +28,7 @@
                 android:src="@drawable/icon_male_red" />
 
             <TextView
-                android:id="@+id/textView_name"
+                android:id="@+id/textView_patientName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -40,14 +41,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_toEndOf="@+id/textView_name"
+                android:layout_toEndOf="@+id/textView_patientName"
                 android:text="Abcdef" />
 
             <TextView
                 android:id="@+id/textView_bloodgroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_name"
+                android:layout_below="@id/textView_patientName"
                 android:layout_marginLeft="20dp"
                 android:layout_toEndOf="@+id/imageViewGender"
                 android:text="Blood Group :"
@@ -63,7 +64,7 @@
                 android:text="O+" />
 
             <TextView
-                android:id="@+id/textView_contactno"
+                android:id="@+id/textView_Case"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textView_bloodgroup"
@@ -78,11 +79,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textViewBloodGroup"
                 android:layout_marginLeft="20dp"
-                android:layout_toEndOf="@+id/textView_contactno"
+                android:layout_toEndOf="@+id/textView_Case"
                 android:text="9767556567" />
 
             <TextView
-                android:id="@+id/textView_city"
+                android:id="@+id/textView_RequestDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textViewContactNo"
@@ -97,14 +98,14 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textViewContactNo"
                 android:layout_marginLeft="20dp"
-                android:layout_toEndOf="@+id/textView_city"
+                android:layout_toEndOf="@+id/textView_RequestDate"
                 android:text="Chennai" />
 
             <TextView
                 android:id="@+id/textView_lastDonationDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_city"
+                android:layout_below="@id/textView_RequestDate"
                 android:layout_marginLeft="20dp"
                 android:layout_toEndOf="@+id/imageViewGender"
                 android:text="Last Donation Date :"
@@ -144,6 +145,16 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 app:srcCompat="@android:drawable/star_big_on" />
+
+            <ImageView
+                android:id="@+id/imageViewCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewStar"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@android:drawable/ic_menu_call" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

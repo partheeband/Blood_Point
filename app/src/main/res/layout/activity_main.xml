@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="BLOOD DONOR MANAGEMENT SYSTEM"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginStart="20dp"
                 android:textStyle="bold"
                 android:textColor="#ffffff"
@@ -64,8 +64,9 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/enter_button"
                 android:layout_below="@+id/imageViewGraph"
-                android:layout_marginTop="40dp"
-                android:layout_marginLeft="50dp"/>
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_centerHorizontal="true"/>
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

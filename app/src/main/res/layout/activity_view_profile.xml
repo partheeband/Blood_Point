@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ViewProfileActivity"
-    android:background="@drawable/backgrounduserinfo">
+    android:background="@drawable/background_userinfo">
 
 <ScrollView
     android:id="@+id/scrollView"
@@ -79,7 +79,7 @@
             android:background="@drawable/textbox">
 
             <TextView
-                android:id="@+id/textView_name"
+                android:id="@+id/textView_patientName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -95,7 +95,7 @@
                 android:id="@+id/textViewUserName"
                 android:layout_width="230dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_name"
+                android:layout_below="@id/textView_patientName"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/textbox"
@@ -135,7 +135,7 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView_city"
+                android:id="@+id/textView_RequestDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textViewGender"
@@ -151,7 +151,7 @@
                 android:id="@+id/editTextCity"
                 android:layout_width="230dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_city"
+                android:layout_below="@id/textView_RequestDate"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/textbox"

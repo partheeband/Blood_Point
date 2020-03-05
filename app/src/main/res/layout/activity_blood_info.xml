@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BloodInfoActivity"
+    android:background="@drawable/bloodinfobackground">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="#0053A5"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="40dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:text="Blood Facts"
+                    android:textColor="#ffffff"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageViewlinkedIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/icon_linkedin"
+                    android:layout_toEndOf="@+id/textViewTitle"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/textViewQuestion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewTitle"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="What’s so important about donating blood?"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewQuestion1"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="A continuous supply of blood is essential to meet the needs of patients in area hospitals, and a steady stream of donors is necessary to meet that need. Blood is only available through the generosity of volunteer donors. It is estimated that 95% of the population will use blood or a blood component by the age of 75 - unfortunately, less than 5% of the eligible population actually donates."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView1"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Who can give blood?"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewQuestion2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Almost anyone who is healthy, at least 16 years old, and weighs at least 110 pounds. (16-year-olds must weigh at least 130 lbs and need signed parental consent.) "
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="How much blood is drawn? Is it safe for my body to lose that much blood?"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewQuestion3"
+                    android:layout_marginTop="20dp"
+                    android:text="One pint. The average person has 10-12 pints, so the small loss is easily afforded. The fluid (plasma) is replaced within 24 hours. The red cells take about five weeks. You can donate again in eight weeks!"
+                    android:textColor="#ffffff"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView3"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Who needs blood transfusions?"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewQuestion4"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="A wide variety of patients receive blood transfusions. The various components of donated blood are used to treat different conditions. For example, red blood cells are transfused to patients who have lost blood due to trauma or surgery, and to treat anemia (including sickle cell anemia). Cancer patients need platelet transfusions to replace the healthy cells that are destroyed during chemotherapy and radiation. Burn victims often need plasma transfusions to treat them for shock."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView4"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Is donating blood safe?"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewQuestion5"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Absolutely. Blood donation conditions are sanitary, and needles are sterile and disposable."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView5"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="What should I do to prepare for donating?"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewQuestion6"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Eat a well-balanced meal, free of fatty or fried foods. A diet that regularly includes iron-rich foods will help promote red cell regeneration, increasing your chances of having an adequate hemoglobin level for blood donation."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView6"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="How will I feel after donating? What activities can I do after my donation?"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewQuestion7"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Most donors feel fine after donating. Remember to eat a healthy meal afterwards and drink plenty of fluids. You can continue your normal routine, but avoid heavy lifting and strenuous exercise for 12 hours."
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView7"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="What are the major blood types?"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewQuestion8"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Your blood type is determined by the antigens it contains. There are two major types of blood antigens: ABO and Rh, which combine to create blood types: O+. O-, A+, A-, B+, B-, AB+ and AB-"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:id="@+id/imageViewBloodTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView8"
+                    android:src="@drawable/blooddonationmapping" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageViewBloodTable"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Who can receive my blood?"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewQuestion9"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="A patient can receive blood that has the same ABO antigens as theirs, plus O. Rh+ can receive Rh+ or Rh-, while Rh- must receive Rh- blood."
+                    android:textColor="#ffffff" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView9"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_centerHorizontal="true">
+                    <TextView
+                        android:id="@+id/textViewDeveloper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Developed By"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewDeveloper"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true">
+                        <TextView
+                            android:id="@+id/textViewDeveloperName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Partheeban"
+                            android:textColor="#ffffff"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/imageViewlinkedIn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-1dp"
+                            android:layout_toEndOf="@+id/textViewDeveloperName"
+                            app:srcCompat="@drawable/icon_linkedin" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

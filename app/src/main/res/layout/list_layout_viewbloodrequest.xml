@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="3dp"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageViewGender"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_male_red" />
+
+            <TextView
+                android:id="@+id/textView_patientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/imageViewGender"
+                android:text="Patient Name :"
+                android:textStyle="bold" />
+            <TextView
+            android:id="@+id/textViewPatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/textView_patientName"
+            android:text="Abcdef" />
+
+
+            <TextView
+                android:id="@+id/textView_bloodgroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_patientName"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/imageViewGender"
+                android:text="Blood Group :"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewBloodGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_patientName"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/textView_bloodgroup"
+                android:text="O+" />
+
+            <TextView
+                android:id="@+id/textView_Case"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_bloodgroup"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/imageViewGender"
+                android:text="Case :"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_bloodgroup"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/textView_Case"
+                android:text="Accident" />
+            <RelativeLayout
+                android:id="@+id/relativeLayoutRequestDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_Case"
+                android:layout_toEndOf="@+id/imageViewGender">
+                <TextView
+                    android:id="@+id/textView_RequestDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Requested On :"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewRequestDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toEndOf="@+id/textView_RequestDate"
+                    android:text="dd-mm-yy hh:mm:ss" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutHospitalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relativeLayoutRequestDate"
+                android:layout_toEndOf="@id/imageViewGender">
+
+                <TextView
+                    android:id="@+id/textView_hospitalName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Hospital Name :"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewHospitalName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/textView_hospitalName"
+                    android:text="Apollo" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView_hospitalLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relativeLayoutHospitalName"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/imageViewGender"
+                android:text="Hospital Location :"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHospitalLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relativeLayoutHospitalName"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/textView_hospitalLocation"
+                android:text="Chennai" />
+            <TextView
+                android:id="@+id/textView_contactNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_hospitalLocation"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/imageViewGender"
+                android:text="Contact No :"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewContactNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_hospitalLocation"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/textView_contactNo"
+                android:text="9678765678" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -15,9 +15,11 @@ import java.util.List;
 public class ViewBloodRequestAdapter extends RecyclerView.Adapter<ViewBloodRequestAdapter.ViewBloodRequestViewHolder>{
     private Context mCtx;
     private List<BloodRequestsHelper> BloodRequestList;
-    public ViewBloodRequestAdapter(Context mCtx, List<BloodRequestsHelper> BloodRequestList) {
+    private SearchDonorAdapter.onNoteListener mOnNoteListener;
+    public ViewBloodRequestAdapter(Context mCtx, List<BloodRequestsHelper> BloodRequestList, SearchDonorAdapter.onNoteListener onNoteListener) {
         this.mCtx = mCtx;
         this.BloodRequestList = BloodRequestList;
+        this.mOnNoteListener=onNoteListener;
     }
 
 
@@ -25,7 +27,7 @@ public class ViewBloodRequestAdapter extends RecyclerView.Adapter<ViewBloodReque
     @Override
     public ViewBloodRequestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(mCtx).inflate(R.layout.list_layout_viewbloodrequest, parent, false);
-        return new ViewBloodRequestViewHolder(view);
+        return new ViewBloodRequestViewHolder(view,mOnNoteListener);
     }
 
     @Override
@@ -50,10 +52,12 @@ public class ViewBloodRequestAdapter extends RecyclerView.Adapter<ViewBloodReque
         return BloodRequestList.size();
     }
 
-    public class ViewBloodRequestViewHolder extends RecyclerView.ViewHolder{
+    public class ViewBloodRequestViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView textViewPatientName,textViewBloodGroup,textViewReasonForRequest,textViewHospitalLocation,textViewHospitalName,textViewRequestDate,textViewContactNo;
-        ImageView imageViewGender;
-        public ViewBloodRequestViewHolder(@NonNull View itemView) {
+        ImageView imageViewGender,imageViewCall;
+
+        SearchDonorAdapter.onNoteListener onNoteListener;
+        public ViewBloodRequestViewHolder(@NonNull View itemView, SearchDonorAdapter.onNoteListener onNoteListener) {
             super(itemView);
             imageViewGender=itemView.findViewById(R.id.imageViewGender);
             textViewPatientName=itemView.findViewById(R.id.textViewPatientName);
@@ -63,6 +67,15 @@ public class ViewBloodRequestAdapter extends RecyclerView.Adapter<ViewBloodReque
             textViewHospitalLocation=itemView.findViewById(R.id.textViewHospitalLocation);
             textViewRequestDate=itemView.findViewById(R.id.textViewRequestDate);
             textViewContactNo=itemView.findViewById(R.id.textViewContactNo);
+            imageViewCall=itemView.findViewById(R.id.imageViewCall);
+
+            this.onNoteListener=onNoteListener;
+            imageViewCall.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            onNoteListener.onNoteClick(getAdapterPosition());
         }
     }
 }

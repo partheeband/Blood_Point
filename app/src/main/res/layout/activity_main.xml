@@ -38,7 +38,7 @@
                 app:srcCompat="@drawable/icon_blood_donationbox"
                 android:layout_below="@+id/textViewTitle"
                 android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp"/>
+                android:layout_marginStart="30dp"/>
 
             <ImageView
                 android:id="@+id/imageViewSomeText"
@@ -47,7 +47,7 @@
                 app:srcCompat="@drawable/homepage_sometext"
                 android:layout_below="@+id/imageViewDonateBox"
                 android:layout_marginTop="40dp"
-                android:layout_marginLeft="40dp"/>
+                android:layout_marginStart="40dp"/>
 
             <ImageView
                 android:id="@+id/imageViewGraph"
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/icon_graph"
                 android:layout_below="@id/imageViewSomeText"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="30dp"/>
 
             <ImageView
@@ -65,7 +65,8 @@
                 app:srcCompat="@drawable/enter_button"
                 android:layout_below="@+id/imageViewGraph"
                 android:layout_marginTop="50dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginBottom="40dp"
                 android:layout_centerHorizontal="true"/>
         </RelativeLayout>
     </ScrollView>

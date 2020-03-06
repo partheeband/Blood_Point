@@ -35,7 +35,7 @@ public class SearchDonorActivity extends AppCompatActivity implements View.OnCli
     private RecyclerView recyclerView;
     ImageView buttonBack,buttonSearch;
     private SearchDonorAdapter adapter;
-    private List<UserInformationHelper> DonorList= new ArrayList<>();;
+    private List<UserInformationHelper> DonorList= new ArrayList<>();
     DatabaseReference dbDonor;
     FirebaseUser user;
     @Override

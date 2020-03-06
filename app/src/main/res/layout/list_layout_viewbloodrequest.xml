@@ -81,33 +81,10 @@
                 android:layout_toEndOf="@+id/textView_Case"
                 android:text="Accident" />
             <RelativeLayout
-                android:id="@+id/relativeLayoutRequestDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textView_Case"
-                android:layout_toEndOf="@+id/imageViewGender">
-                <TextView
-                    android:id="@+id/textView_RequestDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:text="Requested On :"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textViewRequestDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:layout_toEndOf="@+id/textView_RequestDate"
-                    android:text="dd-mm-yy hh:mm:ss" />
-            </RelativeLayout>
-
-            <RelativeLayout
                 android:id="@+id/relativeLayoutHospitalName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/relativeLayoutRequestDate"
+                android:layout_below="@id/textView_Case"
                 android:layout_toEndOf="@id/imageViewGender">
 
                 <TextView
@@ -163,6 +140,37 @@
                 android:layout_marginLeft="20dp"
                 android:layout_toEndOf="@+id/textView_contactNo"
                 android:text="9678765678" />
+            <RelativeLayout
+                android:id="@+id/relativeLayoutRequestDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_contactNo"
+                android:layout_toEndOf="@+id/imageViewGender">
+                <TextView
+                    android:id="@+id/textView_RequestDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Requested On :"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewRequestDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toEndOf="@+id/textView_RequestDate"
+                    android:text="dd-mm-yy hh:mm:ss" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageViewCall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                app:srcCompat="@drawable/ic_phone_black_24dp" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

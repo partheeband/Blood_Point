@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -22,11 +25,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ViewBloodRequestActivity extends AppCompatActivity implements View.OnClickListener  {
+public class ViewBloodRequestActivity extends AppCompatActivity implements View.OnClickListener,SearchDonorAdapter.onNoteListener  {
     private RecyclerView recyclerView;
     private ImageView buttonBack;
     private ViewBloodRequestAdapter adapter;
-    private List<BloodRequestsHelper> BloodRequestList;
+    private List<BloodRequestsHelper> BloodRequestList= new ArrayList<>();
     Query dbBloodRequests,myRef;
     FirebaseUser user;
     UserInformationHelper userinformation;
@@ -45,7 +48,7 @@ public class ViewBloodRequestActivity extends AppCompatActivity implements View.
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         BloodRequestList = new ArrayList<>();
-        adapter = new ViewBloodRequestAdapter(this, BloodRequestList);
+        adapter = new ViewBloodRequestAdapter(this, BloodRequestList,this);
         recyclerView.setAdapter(adapter);
 
         //to retrieve current user blood type
@@ -170,5 +173,16 @@ public class ViewBloodRequestActivity extends AppCompatActivity implements View.
             }
         }
         return canDonateBloodTo.toArray();
+    }
+
+    @Override
+    public void onNoteClick(int position) {
+        BloodRequestsHelper bloodRequestDetails=BloodRequestList.get(position);
+        Toast.makeText(this, "Calling "+bloodRequestDetails.contactNo, Toast.LENGTH_SHORT).show();
+
+        String phone =bloodRequestDetails.contactNo;
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+        startActivity(intent);
+        Log.d("cardviewPosition", String.valueOf(position));
     }
 }

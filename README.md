@@ -38,12 +38,12 @@ and the **UI** is designed using **XML** (Extendible Markup Language).
 
 ## System Design 
 
-#### Flowchart
+* #### Flowchart
 <p align="center">
-  <img src="./images/home.jpg" alt="" width="30%" height="20%">
+  <img src="./images/flowchart.png" alt="" width="30%" height="30%">
 </p>
 
-#### System Architecture Design
+* #### System Architecture Design
 <p align="center">
   <img src="./images/home.jpg" alt="" width="30%" height="20%">
 </p>

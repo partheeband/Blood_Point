@@ -40,12 +40,12 @@ and the **UI** is designed using **XML** (Extendible Markup Language).
 
 * #### Flowchart
 <p align="center">
-  <img src="./images/flowchart.png" alt="" width="30%" height="30%">
+  <img src="./images/flowchart.png" alt="" width="50%" height="50%">
 </p>
 
 * #### System Architecture Design
 <p align="center">
-  <img src="./images/home.jpg" alt="" width="30%" height="20%">
+  <img src="./images/system architecture design.png" alt="" width="50%" height="50%">
 </p>
 
 
@@ -68,7 +68,7 @@ any of blood type and their location.
 blood group to whom he/she can able to donate blood.
     The Blood donation mapping are as follows:
 <p align="center">
-  <img src="./images/home.jpg" alt="" width="30%" height="20%">
+  <img src="./images/blood donation mapping.png" alt="" width="30%" height="20%">
 </p>
 
 5. #### Request Blood Module:

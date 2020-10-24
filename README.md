@@ -1,4 +1,4 @@
-# Blood Point
+# BLOOD POINT
 A Ready to release **Android Application for Blood Donor Management System**.
 
 ## Abstract
@@ -45,7 +45,7 @@ and the **UI** is designed using **XML** (Extendible Markup Language).
 
 * #### System Architecture Design
 <p align="center">
-  <img src="./images/system architecture design.png" alt="" width="50%" height="50%">
+  <img src="./images/system architecture design.png" alt="" width="60%" height="60%">
 </p>
 
 
@@ -68,12 +68,35 @@ any of blood type and their location.
 blood group to whom he/she can able to donate blood.
     The Blood donation mapping are as follows:
 <p align="center">
-  <img src="./images/blood donation mapping.png" alt="" width="30%" height="20%">
+  <img src="./images/blood donation mapping.png" alt="" width="50%" height="50%">
 </p>
 
 5. #### Request Blood Module:
     This module will store the blood request details such as patient name, blood group, gender, hospital name, location, contact number 
 and reason for request from procurers those who are in need into firebase real time database.
 
+#### You can Reach me at [partheebansms@gmail.com](mailto://partheebansms@gmail.com)
 
 
+## Application Snapshots
+
+<p align="center">
+<img src="./images/home.jpg" alt="" width="30%" height="20%">
+<img src="./images/login.jpg" alt="" width="30%" height="20%">
+<img src="./images/signup.jpg" alt="" width="30%" height="20%">
+<img src="./images/dashboard.jpg" alt="" width="30%" height="20%">
+<img src="./images/user info.jpg" alt="" width="30%" height="20%">
+<img src="./images/Donation details.jpg" alt="" width="30%" height="20%">
+<img src="./images/update donation detail.jpg" alt="" width="30%" height="20%">
+<img src="./images/donor details.jpg" alt="" width="30%" height="20%">
+<img src="./images/blood requests.jpg" alt="" width="30%" height="20%">
+<img src="./images/request blood.jpg" alt="" width="30%" height="20%">
+</p>
+
+
+## Database Snapshot
+
+<p align="center">
+  <img src="./images/firebase authentication.png" alt="" width="70%" height="25%">
+  <img src="./images/firebase database skeleton.png" alt="" width="70%" height="25%">
+</p>

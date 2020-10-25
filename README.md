@@ -1,5 +1,8 @@
 # BLOOD POINT
 A Ready to release **Android Application for Blood Donor Management System**.
+<p align="center">
+<img src="./images/project-BloodPoint-web.png" alt="" width="30%" height="20%">
+</p>
 
 ## Abstract
 Blood Bank Management System is an android application designed to **automate the Blood Searching process during emergency cases** 

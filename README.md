@@ -78,7 +78,7 @@ blood group to whom he/she can able to donate blood.
     This module will store the blood request details such as patient name, blood group, gender, hospital name, location, contact number 
 and reason for request from procurers those who are in need into firebase real time database.
 
-#### You can Reach me at [partheebansms@gmail.com](mailto://partheebansms@gmail.com)
+#### You can Reach me at [partheebansms@gmail.com](mailto:partheebansms@gmail.com)
 
 
 ## Application Snapshots
@@ -103,3 +103,5 @@ and reason for request from procurers those who are in need into firebase real t
   <img src="./images/firebase authentication.png" alt="" width="70%" height="25%">
   <img src="./images/firebase database skeleton.png" alt="" width="70%" height="25%">
 </p>
+
+#### You can Reach me at [partheebansms@gmail.com](mailto:partheebansms@gmail.com)
